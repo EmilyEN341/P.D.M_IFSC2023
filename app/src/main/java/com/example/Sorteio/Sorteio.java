@@ -7,6 +7,8 @@ import android.util.Log;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    EditText edmin, edmax;
+    TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,6 +16,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d("Ciclo de Vida Activity", "onCreate ");
         Toast.makeText(this, "onCreate", Toast.LENGTH_LONG).show();
+
+        edmin= findView(R.layout.activity_main);
+
+    }
+
+    public void Sortear (View v){
+        int min, max;
+
+        min=Integer.parseInt(edmin.getText().toString());
+        ma=Integer.parseInt(edmax.getText().toString());
+
+        //Math .random [0,1]
+        int sorteado= min + (Math .random()*(max-min+1));
+
+        textView.setText(sorteado);
+
+        Random rand = new Random();
+
+        sorteado=rand.nextInt (bound: (max-min)+1)+min;
+
     }
 
     @Override
