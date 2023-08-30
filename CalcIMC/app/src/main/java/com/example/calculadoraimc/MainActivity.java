@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void irTelaMaisInfo(View view) {
-        Intent itTelaMaisInfo = new Intent(this, TelaMaisInfo.class);
+        Intent itTelaMaisInfo = new Intent(this, TelMaisInf.class);
         itTelaMaisInfo.putExtra("p_imc", imc);
         startActivity(itTelaMaisInfo);
     }

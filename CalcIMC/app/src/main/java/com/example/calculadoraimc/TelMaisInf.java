@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.text.DecimalFormat;
 
-public class TelaMaisInfo extends AppCompatActivity {
+public class TelMaisInf extends AppCompatActivity {
 
     private TextView txtImcResultado, txtTaxa;
     private Double imc;
@@ -17,7 +17,7 @@ public class TelaMaisInfo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tela_mais_info);
+        setContentView(R.layout.activity_tel_mais_inf);
 
         txtTaxa = findViewById(R.id.txtTaxaIMC);
 
