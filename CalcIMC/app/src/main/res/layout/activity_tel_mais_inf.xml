@@ -73,7 +73,7 @@
         <Button
             android:id="@+id/btnVoltar"
             android:layout_width="300dp"
-            android:layout_height="80dp"
+            android:lsayout_height="80dp"
             android:layout_weight="1"
             android:onClick="voltarTelaMain"
             android:text="Voltar"
