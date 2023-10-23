@@ -28,9 +28,26 @@ public class MainActivity extends AppCompatActivity {
         sqlietbd.execSQL("CREATE TABLE IF NOT EXISTS tabelinha (id INTEGER PRIMARY KEY AUTOINCREMENT,txt varchar)");
     }
     public void inserirNota(){
+        String nota = editText().toString();
+
+        if(!nota.isEmpty()){
+            sqlietbd.execSQL(insertQuery);
+
+            editText.setText("");
+
+            listarNota();
+        }
 
     }
-    public void inserirNota(){
+    public void listarNota(){
+        Cursor cursor = sqlietbd.rawQuery("SELECT * FROM tabelinha", null);
+
+        ArrayList<String> notas = new ArrayList<>();
+        if(cursor.moveToFirst()){
+            do{
+                String nota = cursor
+            }
+        }
 
     }
 }
