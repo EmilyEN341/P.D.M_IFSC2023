@@ -45,9 +45,12 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<String> notas = new ArrayList<>();
         if(cursor.moveToFirst()){
             do{
-                String nota = cursor
-            }
-        }
+                String nota = cursor.getString(cursor.getColumnIndex("nota"));
+            notas.add(nota);
+        } while (cursor.moveToNext());
+    }
 
     }
+        cursor.close();
+        db.close();
 }
