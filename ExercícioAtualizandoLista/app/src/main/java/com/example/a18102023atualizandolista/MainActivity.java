@@ -46,9 +46,9 @@ public class MainActivity extends AppCompatActivity {
         if(cursor.moveToFirst()){
             do{
                 String nota = cursor.getString(cursor.getColumnIndex("nota"));
-            notas.add(nota);
-        } while (cursor.moveToNext());
-    }
+                notas.add(nota);
+            } while (cursor.moveToNext());
+        }
 
     }
         cursor.close();
