@@ -1,9 +1,9 @@
-package com.example.laucher.controller;
+package com.example.BlocoDeNotas_Laucher.controller;
 
 import android.content.Context;
 
-import com.example.laucher.modelo.Nota;
-import com.example.laucher.modelo.NotaDAO;
+import com.example.BlocoDeNotas_Laucher.modelo.Nota;
+import com.example.BlocoDeNotas_Laucher.modelo.NotaDAO;
 
 public class NotaController {
     Context nContext;

@@ -1,4 +1,4 @@
-package com.example.laucher.modelo;
+package com.example.BlocoDeNotas_Laucher.modelo;
 
 import android.content.ContentValues;
 import android.content.Context;

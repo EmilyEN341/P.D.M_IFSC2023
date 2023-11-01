@@ -1,4 +1,4 @@
-package com.example.laucher.modelo;
+package com.example.BlocoDeNotas_Laucher.modelo;
 
 public class Nota {
     Integer id;

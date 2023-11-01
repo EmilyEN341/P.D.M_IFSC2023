@@ -1,4 +1,4 @@
-package com.example.laucher;
+package com.example.BlocoDeNotas_Laucher;
 
 import android.content.Context;
 
