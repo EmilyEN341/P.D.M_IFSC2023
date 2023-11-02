@@ -11,6 +11,7 @@ public class NotaDAO {
     SQLiteDatabase db;
 
     public NotaDAO(Context c) {
+
         this.db = c.openOrCreateDatabase("notas.db", Context.MODE_PRIVATE, null);
         db.execSQL("CREATE TABLE IF NOT EXISTS notas (id Integer PRIMARY KEY AUTOINCREMENT, " +
                 "texto varchar);");
@@ -34,11 +35,15 @@ public class NotaDAO {
         String sql = "SELECT * FROM notas";
         Cursor cursor = db.rawQuery(sql, null);
 
+
+        if (cursor.getCount()<=0){
+            return notes;
+        }
         // Percorra todos os registros do cursor
         while (cursor.moveToNext()) {
             // Recupere o ID, título e texto da nota atual
-            int id = 4;// cursor.getInt(cursor.getColumnIndex("id"));
-            String text ="Teste"; // cursor.getString(cursor.getColumnIndex("text"));
+            int id = cursor.getInt(cursor.getColumnIndex("id"));
+            String text = cursor.getString(cursor.getColumnIndex("texto"));
 
             // Crie um novo objeto Nota com os dados recuperados
             Nota note = new Nota(id, text);
@@ -63,5 +68,6 @@ public class NotaDAO {
         return n;
 
     }
+
 }
 

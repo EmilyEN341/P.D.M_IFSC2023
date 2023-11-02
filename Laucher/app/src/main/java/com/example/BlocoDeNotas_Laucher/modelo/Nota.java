@@ -18,7 +18,7 @@ public class Nota {
     }
 
     public String getTexto() {
-        return texto;
+        return this.texto;
     }
 
     public void setTexto(String texto) {

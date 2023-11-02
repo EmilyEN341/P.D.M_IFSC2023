@@ -4,90 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.example.BlocoDeNotas_Laucher.MainActivityNote">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:background="#7000FF"
-        android:baselineAligned="true"
-        android:orientation="horizontal"
-        android:padding="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
+    android:id="@+id/linearLayout"
+    android:layout_width="411dp"
+    android:layout_height="68dp"
+    android:background="#7000FF"
+    android:baselineAligned="true"
+    android:clipToPadding="false"
+    android:dividerPadding="100dp"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:ignore="MissingConstraints">
+
 
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="109dp"
+            android:layout_height="49dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/notebrand_my" />
+            app:srcCompat="@drawable/notebrand_my"
+            tools:ignore="InefficientWeight"
+            android:contentDescription="TODO" />
 
         <TextView
             android:id="@+id/app_name"
-            android:layout_width="343dp"
-            android:layout_height="match_parent"
+            android:layout_width="321dp"
+            android:layout_height="49dp"
             android:text="My notes"
             android:textAlignment="viewStart"
             android:textColor="#FDFDFD"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/listview_apps"
-        android:layout_width="371dp"
-        android:layout_height="542dp"
-        android:layout_margin="20dp"
-
-
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createText" />
-
     <EditText
-        android:id="@+id/createText"
+        android:id="@+id/editNote"
         android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_height="56dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
-        android:layout_marginBottom="4dp"
+        android:autofillHints=""
         android:ems="10"
         android:inputType="text"
         android:text="Insira a nota"
-        android:textColor="#C4C4C5"
-        app:layout_constraintBottom_toTopOf="@+id/listview_apps"
-        app:layout_constraintEnd_toStartOf="@+id/SUpdtbutton"
+        android:textColor="#000000"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/addButton"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <Button
-        android:id="@+id/SUpdtbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/addButton"
+        android:layout_width="120dp"
+        android:layout_height="56dp"
         android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="#7000FF"
         android:text="Adicionar"
         android:textColor="#FFFFFF"
+        android:visibility="visible"
         app:circularflow_radiusInDP="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/createText"
+        app:layout_constraintCircleRadius="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/createText"
-        app:layout_constraintTop_toTopOf="@+id/createText"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toEndOf="@+id/editNote"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <ListView
+        android:id="@+id/listview_notes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+
+
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNote" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

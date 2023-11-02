@@ -12,7 +12,7 @@
         android:theme="@style/Theme.Laucher"
         tools:targetApi="31">
         <activity
-            android:name="com.example.BlocoDeNotas_Laucher.MainActivity"
+            android:name="com.example.BlocoDeNotas_Laucher.MainActivityNote"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
