@@ -6,43 +6,88 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:background="#7000FF"
+        android:baselineAligned="true"
         android:orientation="horizontal"
         android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
+
         <ImageView
-            android:id="@+id/app_icon"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_marginEnd="8dp" />
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/notebrand_my" />
 
         <TextView
             android:id="@+id/app_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp" />
+            android:layout_width="343dp"
+            android:layout_height="match_parent"
+            android:text="My notes"
+            android:textAlignment="viewStart"
+            android:textColor="#FDFDFD"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
     <ListView
         android:id="@+id/listview_apps"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="371dp"
+        android:layout_height="542dp"
         android:layout_margin="20dp"
 
 
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/createText" />
+
+    <EditText
+        android:id="@+id/createText"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Insira a nota"
+        android:textColor="#C4C4C5"
+        app:layout_constraintBottom_toTopOf="@+id/listview_apps"
+        app:layout_constraintEnd_toStartOf="@+id/SUpdtbutton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/SUpdtbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#7000FF"
+        android:text="Adicionar"
+        android:textColor="#FFFFFF"
+        app:circularflow_radiusInDP="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/createText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/createText"
+        app:layout_constraintTop_toTopOf="@+id/createText"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

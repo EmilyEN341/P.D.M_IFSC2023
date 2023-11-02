@@ -2,26 +2,66 @@ package com.example.BlocoDeNotas_Laucher.modelo;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-public class NotaDAO {
+import java.util.ArrayList;
 
-    SQLiteDatabase database;
+public class NotaDAO {
+    SQLiteDatabase db;
+
     public NotaDAO(Context c) {
-        database = c.openOrCreateDatabase("dbNotas",c.MODE_PRIVATE, null);
-        database.execSQL("CREATE TABLE IF NOT EXISTS notas (id INTEGER PRIMARY KEY AUTOINCREMENT," +
-                "titulo varchar," +
-                "texto carchar)");
+        this.db = c.openOrCreateDatabase("notas.db", Context.MODE_PRIVATE, null);
+        db.execSQL("CREATE TABLE IF NOT EXISTS notas (id Integer PRIMARY KEY AUTOINCREMENT, " +
+                "texto varchar);");
+
     }
 
-    public Nota getInserirNota(Nota n){
+    public void update(Nota n) {
+        ContentValues cv = new ContentValues();
+        cv.put("texto", n.texto);
+        db.insert("notas", null, cv);
+    }
 
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("titulo",n.getTitulo());
-        contentValues.put("texto",n.getTexto());
+    public void delete(int id) {
+        db.delete("notas", "id = ?", new String[]{String.valueOf(id)});
+    }
 
-        int i = (int)database.insert("nots", null, contentValues);
+    public ArrayList<Nota> getAllNotes() {
+        ArrayList<Nota> notes = new ArrayList<>();
+
+        // Execute o comando SQL para selecionar todas as notas
+        String sql = "SELECT * FROM notas";
+        Cursor cursor = db.rawQuery(sql, null);
+
+        // Percorra todos os registros do cursor
+        while (cursor.moveToNext()) {
+            // Recupere o ID, título e texto da nota atual
+            int id = 4;// cursor.getInt(cursor.getColumnIndex("id"));
+            String text ="Teste"; // cursor.getString(cursor.getColumnIndex("text"));
+
+            // Crie um novo objeto Nota com os dados recuperados
+            Nota note = new Nota(id, text);
+
+            // Adicione o objeto Nota à lista de notas
+            notes.add(note);
+
+
+        }
+        // Feche o cursor para evitar vazamentos de recursos
+        cursor.close();
+
+        // Retorne a lista de notas
+        return notes;
+    }
+
+    public Nota getInserirNota(Nota n) {
+        ContentValues cv = new ContentValues();
+        cv.put("texto", n.getTexto());
+        Integer i = (int) db.insert("notas", null, cv);
         n.setId(i);
         return n;
+
     }
 }
+

@@ -2,11 +2,10 @@ package com.example.BlocoDeNotas_Laucher.modelo;
 
 public class Nota {
     Integer id;
-    String titulo;
     String texto;
 
-    public Nota(String titulo, String texto) {
-        this.titulo = titulo;
+    public Nota(Integer id, String texto) {
+        this.id = id;
         this.texto = texto;
     }
 
@@ -18,14 +17,6 @@ public class Nota {
         this.id = id;
     }
 
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
     public String getTexto() {
         return texto;
     }
@@ -33,7 +24,6 @@ public class Nota {
     public void setTexto(String texto) {
         this.texto = texto;
     }
-
 }
 
 
