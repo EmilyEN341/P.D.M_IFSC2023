@@ -2,13 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/back"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3C0093"
-    tools:layout_editor_absoluteX="6dp"
-    tools:layout_editor_absoluteY="-48dp"
-    tools:visibility="visible">
+    tools:context="com.example.BlocoDeNotas_Laucher.controller.MainActivity">
+
 
     <ImageView
         android:id="@+id/imageView"
@@ -29,6 +26,7 @@
         android:layout_marginBottom="1dp"
         android:fontFamily="sans-serif-black"
         android:text="Atividade bloco de notas"
+        android:textAllCaps="true"
         android:textColor="#6D12F1"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
@@ -44,6 +42,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
         android:text="Atividade bloco de notas"
+        android:textAllCaps="true"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView"
@@ -59,11 +58,12 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:background="#FFFFFF"
+        android:onClick="irTelaNovaNota"
         android:text="Nova Nota"
         android:textAlignment="center"
+        android:textAllCaps="false"
         android:textColor="#7000FE"
         android:textStyle="bold"
-        android:onClick="irTelaNovaNota"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -80,6 +80,7 @@
         android:background="#7000FE"
         android:onClick="irTelaMinhasNotas"
         android:text="Minhas Notas"
+        android:textAllCaps="false"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/novaNotaButton"

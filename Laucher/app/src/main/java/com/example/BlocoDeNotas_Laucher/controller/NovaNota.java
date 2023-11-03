@@ -22,7 +22,7 @@ import com.example.laucher.R;
 import java.util.ArrayList;
 
 
-public class NovaNota extends AppCompatActivity {
+public class NovaNota extends AppCompatActivity{
 
     ArrayList<Nota> notas = new ArrayList<>();
     ListView list;
@@ -37,7 +37,7 @@ public class NovaNota extends AppCompatActivity {
         Intent it = getIntent();
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.minhas_notas);
+        setContentView(R.layout.nova_nota);
 
         banco = new NotaDAO(getBaseContext());
         list = findViewById(R.id.listview_notes);
@@ -102,5 +102,8 @@ public class NovaNota extends AppCompatActivity {
 //                android.R.id.text1,
 //                notas);
         list.setAdapter(adapter);
+    }
+    public void voltarTelaMain(View view) {
+        this.finish();
     }
 }

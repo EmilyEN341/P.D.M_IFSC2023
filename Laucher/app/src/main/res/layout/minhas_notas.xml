@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.BlocoDeNotas_Laucher.MainActivityNote">
+    tools:context="com.example.BlocoDeNotas_Laucher.controller.MinhasNotas">
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="411dp"
-        android:layout_height="68dp"
+        android:layout_width="392dp"
+        android:layout_height="67dp"
         android:background="#7000FF"
-        android:baselineAligned="true"
+        android:baselineAligned="false"
         android:clipToPadding="false"
         android:dividerPadding="100dp"
         android:orientation="horizontal"
@@ -27,16 +27,18 @@
             android:layout_width="109dp"
             android:layout_height="49dp"
             android:layout_weight="1"
+            android:onClick="voltarTelaMain"
             android:contentDescription="TODO"
             app:srcCompat="@drawable/notebrand_my"
             tools:ignore="InefficientWeight" />
 
         <TextView
             android:id="@+id/app_name"
-            android:layout_width="321dp"
-            android:layout_height="49dp"
-            android:text="My notes"
-            android:textAlignment="viewStart"
+            android:layout_width="327dp"
+            android:layout_height="wrap_content"
+            android:text="Minhas Notas"
+            android:textAlignment="center"
+            android:textAllCaps="true"
             android:textColor="#FDFDFD"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -68,7 +70,7 @@
         android:autofillHints=""
         android:ems="10"
         android:inputType="text"
-        android:text="Insira a nota"
+        android:text="teste"
         android:textColor="#000000"
         android:visibility="visible"
         app:layout_constraintEnd_toStartOf="@+id/addButton"
@@ -85,7 +87,8 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="#7000FF"
-        android:text="Adicionar"
+        android:text="Atualizar"
+        android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:visibility="visible"
         app:circularflow_radiusInDP="20dp"
