@@ -1,9 +1,8 @@
-package com.example.BlocoDeNotas_Laucher;
+package com.example.BlocoDeNotas_Laucher.controller;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,6 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.BlocoDeNotas_Laucher.modelo.Nota;
 import com.example.BlocoDeNotas_Laucher.modelo.NotaAdapter;
 import com.example.BlocoDeNotas_Laucher.modelo.NotaDAO;
@@ -19,7 +21,8 @@ import com.example.laucher.R;
 
 import java.util.ArrayList;
 
-public class MainActivityNote extends AppCompatActivity {
+
+public class NovaNota extends AppCompatActivity {
 
     ArrayList<Nota> notas = new ArrayList<>();
     ListView list;
@@ -30,8 +33,11 @@ public class MainActivityNote extends AppCompatActivity {
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        Intent it = getIntent();
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.notas);
+        setContentView(R.layout.minhas_notas);
 
         banco = new NotaDAO(getBaseContext());
         list = findViewById(R.id.listview_notes);

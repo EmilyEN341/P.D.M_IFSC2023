@@ -20,7 +20,7 @@ public class NotaDAO {
 
     public void update(Nota n) {
         ContentValues cv = new ContentValues();
-        cv.put("texto", n.texto);
+        cv.put("texto", n.getTexto());
         db.insert("notas", null, cv);
     }
 

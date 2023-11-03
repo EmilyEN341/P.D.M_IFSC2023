@@ -7,20 +7,19 @@
     tools:context="com.example.BlocoDeNotas_Laucher.MainActivityNote">
 
     <LinearLayout
-    android:id="@+id/linearLayout"
-    android:layout_width="411dp"
-    android:layout_height="68dp"
-    android:background="#7000FF"
-    android:baselineAligned="true"
-    android:clipToPadding="false"
-    android:dividerPadding="100dp"
-    android:orientation="horizontal"
-    android:padding="8dp"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    tools:ignore="MissingConstraints">
-
+        android:id="@+id/linearLayout"
+        android:layout_width="411dp"
+        android:layout_height="68dp"
+        android:background="#7000FF"
+        android:baselineAligned="true"
+        android:clipToPadding="false"
+        android:dividerPadding="100dp"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
 
         <ImageView
@@ -28,9 +27,9 @@
             android:layout_width="109dp"
             android:layout_height="49dp"
             android:layout_weight="1"
+            android:contentDescription="TODO"
             app:srcCompat="@drawable/notebrand_my"
-            tools:ignore="InefficientWeight"
-            android:contentDescription="TODO" />
+            tools:ignore="InefficientWeight" />
 
         <TextView
             android:id="@+id/app_name"
@@ -44,12 +43,27 @@
 
     </LinearLayout>
 
+    <ListView
+        android:id="@+id/listview_notes"
+        android:layout_width="381dp"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+
+
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNote"
+        app:layout_constraintVertical_bias="0.6" />
+
     <EditText
         android:id="@+id/editNote"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="4dp"
         android:autofillHints=""
         android:ems="10"
@@ -68,7 +82,7 @@
         android:layout_width="120dp"
         android:layout_height="56dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:backgroundTint="#7000FF"
         android:text="Adicionar"
@@ -80,20 +94,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/editNote"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <ListView
-        android:id="@+id/listview_notes"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="20dp"
-
-
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editNote" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
