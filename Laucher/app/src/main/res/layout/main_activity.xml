@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#2A0965"
     tools:context="com.example.BlocoDeNotas_Laucher.controller.MainActivity">
 
 
@@ -53,7 +54,7 @@
         app:layout_constraintVertical_bias="0.707" />
 
     <Button
-        android:id="@+id/novaNotaButton"
+        android:id="@+id/btnNovaNota"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -67,12 +68,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/minhaNotasButton"
+        app:layout_constraintStart_toEndOf="@+id/btnMinhasNotas"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.25" />
 
     <Button
-        android:id="@+id/minhaNotasButton"
+        android:id="@+id/btnMinhasNotas"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -83,7 +84,7 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/novaNotaButton"
+        app:layout_constraintEnd_toStartOf="@+id/btnNovaNota"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
