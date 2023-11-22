@@ -33,11 +33,10 @@ public class NovaNota extends AppCompatActivity{
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-        Intent it = getIntent();
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nova_nota);
+
+        Intent it = getIntent();
 
         banco = new NotaDAO(getBaseContext());
         list = findViewById(R.id.listview_notes);

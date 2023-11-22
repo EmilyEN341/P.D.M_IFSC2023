@@ -27,12 +27,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void irTelaNovaNota(View view) {
-        Intent intent = new Intent(this, NovaNota.class);
-        startActivity(intent);
+        Intent itTelaNovaNota = new Intent(this, NovaNota.class);
+        startActivity(itTelaNovaNota);
     }
 
     public void irTelaMinhasNotas(View view) {
-        Intent intent = new Intent(this, MinhasNotas.class);
-        startActivity(intent);
+        Intent itTelaMinhasNotas = new Intent(this, MinhasNotas.class);
+        startActivity(itTelaMinhasNotas);
     }
 }
