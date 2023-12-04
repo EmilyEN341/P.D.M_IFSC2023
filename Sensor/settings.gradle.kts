@@ -13,7 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AulaSensor"
-include(":app")
-include(":app")
+rootProject.name = "Sensor"
 include(":app")
